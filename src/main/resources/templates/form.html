@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Inicie Sesión</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
+<style type="text/css">
+		#T1, #T2 {
+			text-align: center;
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="container">
+			<img class="logos" th:src="@{/images/logo.png}" alt="logo">
+			<ul class="container">
+				<li><a href="https://www.starbucks.pe/" class="disabled">INICIO</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="http://localhost:8080/producto/listado" class="disabled">BEBIDAS</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#" class="disabled">ALIMENTOS</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#" class="disabled">PACKS Y BOXES</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#" class="disabled">MERCH Y CAFÉ EN GRANO</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="http://localhost:8080/usuario/form">INICIE SESIÓN</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<hr border="3px">
+	<h1 id="T1">Inicio de sesón</h1>
+	<hr border="3px">
+	<br>
+
+	<h2 th:text="${titulo}" id="T2"></h2>
+	<form th:action="@{/usuario/form}" th:object="${usuario}" method="post" class="form">
+		<div class="form__container">
+			<label for="username">Usuario:</label>
+			<div>
+				<input type="text" th:field="*{username}">
+			</div>
+			<div th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+		</div>
+		<div>
+			<label for="password">Clave:</label>
+			<div>
+				<input type="password" th:field="*{password}">
+			</div>
+			<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+		</div>
+		<div>
+			<label for="email">Email:</label>
+			<div>
+				<input type="text" th:field="*{email}">
+			</div>
+			<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+		</div>
+		<div>
+			<label for="pais.codigo">País:</label>
+			<div>
+				<select th:field="*{pais.codigo}">
+					<option value="">-- Seleccione --</option>
+					<option th:each="pais: ${objectPaises}" th:text="${pais.nombre}" th:value="${pais.codigo}"></option>
+				</select>
+			</div>
+			<div th:if="${#fields.hasErrors('pais.codigo')}" th:errors="*{pais.codigo}"></div>
+		</div>
+		<br>
+		<div>
+			<input type="submit" value="Enviar">
+		</div>
+	</form>
+</body>
+</html>

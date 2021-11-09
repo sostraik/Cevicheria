@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>¡Inicio Exitoso!</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
+</head>
+<body>
+	<nav class="container">
+			<img class="logos" th:src="@{/images/logo.png}" alt="logo">
+			<ul class="container">
+				<li><a href="https://www.starbucks.pe/">INICIO</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="http://localhost:8080/producto/listado">BEBIDAS</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#">ALIMENTOS</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#">PACKS Y BOXES</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#">MERCH Y CAFÉ EN GRANO</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a th:text="${usuario.username}"></a></li>
+			</ul>
+		</nav>
+	<h2 th:text="${titulo}"></h2>
+	<ul>
+		<li th:text="${usuario.id}"></li>
+		<li th:text="${usuario.username}"></li>
+		<li th:text="${usuario.password}"></li>
+		<li th:text="${usuario.email}"></li>
+		<li th:text="${usuario.pais.codigo}"></li>
+	</ul>
+</body>
+</html>

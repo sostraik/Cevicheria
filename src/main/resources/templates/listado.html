@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		#T1 {
+			text-align: center;
+			font-size: 40px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
+</head>
+
+<body>
+	<header>
+		<nav class="container">
+			<img class="logos" th:src="@{/images/logo.png}" alt="logo">
+			<ul class="container">
+				<li><a href="https://www.starbucks.pe/">INICIO</a></li>
+				<li><a href="http://localhost:8080/producto/listado">BEBIDAS</a></li>
+				<li><a href="#">ALIMENTOS</a></li>
+				<li><a href="#">PACKS Y BOXES</a></li>
+				<li><a href="#">MERCH Y CAFÉ EN GRANO</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<hr border="3px">
+	<h1 id="T1">LISTADO DE BEBIDAS</h1>
+	<hr border="3px">
+	<br>
+
+	<span th:if="${productos.isEmpty()}">No existen bebidas</span>
+	
+	<table th:if="${!productos.isEmpty()}" border="4px">
+		<thead>
+			<tr>
+				<th>Bebida</th>
+				<th>Precio</th>
+				<th>Cantidad</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="producto: ${productos}">
+				<td th:text="${producto.nombrep}"></td>
+				<td th:text="${producto.preciop}"></td>
+				<td th:text="${producto.cantidadp} ?: 'Cantidad indefinida'"></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<footer id="pie">
+		Derechos Reservados &copy; 2020-2021
+	</footer>
+</body>
+
+</html>

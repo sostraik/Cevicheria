@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Secular One', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background: linear-gradient(to right, white 0%, white 70%,#00704a 70%, #00704a 100%);
+}
+
+.container{display: flex;}
+
+nav{
+    justify-content: space-around;
+    padding-top: 1%;
+    width: 70%;
+}
+
+
+.logos{
+    width: 9%;
+}
+
+ul{
+    width: 55%;
+    list-style: none;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    top: calc(50% - .6em);
+    text-align: justify;
+    color: #000;
+}
+
+a:hover{
+    color:#00704a;
+    transition: 1s;
+}
+
+section{
+    display: inline-block;
+    padding: 5em;
+    width: 50%;
+}
+
+.cafe{
+    width: 24%;
+    position: absolute;
+    right: 15%;
+    top: 28%;
+}
+
+/*=================== MEDIA QUERY =====================*/
+@media screen and (max-width:1366px){
+    *{
+        font-size: 16px;
+    }
+    a{
+        font-size: .9em;
+        margin: .5em;
+    }
+}
+
+@media screen and (max-width: 425px), screen and (max-width: 768px){
+    body{
+        background: #fff;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5%;
+        width: auto;
+    }
+
+    .logos{
+        width: 50%;
+        position: relative;
+        left: 25%;
+    }
+
+    ul{
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        margin: 8%;
+    }
+    li{
+        margin: 5%;
+    }
+
+    main{
+        position: fixed;
+        visibility: hidden;
+    }
+
+}
+
+#pie { 
+ 		clear: both;
+ 		text-align: center; 
+ 		padding: 20px; 
+ 		border-top: 6px solid rgb(0, 0, 0);
+ 	}
+
+table {
+		/* Para centrar usamos "auto" en la alineación horizontal */
+    margin: 0 auto;
+		/*Lo siguiente es para los bordes*/
+    border-collapse: collapse;
+}
+
+
+.form{
+    margin: auto;
+    width: 80%;
+    max-width: 300px;
+    padding: 3em 1em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0, 0, 0 /30%);
+    text-align: center;
+    background-color: rgba(0, 112, 74, 0.8)!important;
+}
+
+.form__container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+

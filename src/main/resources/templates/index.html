@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title th:text="${titulo}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
+</head>
+
+<body>
+
+	<header>
+		<nav class="container">
+			<img class="logos" th:src="@{/images/logo.png}" alt="logo">
+			<ul class="container">
+				<li><a href="https://www.starbucks.pe/" class="disabled">INICIO</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="http://localhost:8080/producto/listado" class="disabled">BEBIDAS</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#" class="disabled">ALIMENTOS</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#" class="disabled">PACKS Y BOXES</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="#" class="disabled">MERCH Y CAFÉ EN GRANO</a></li>
+				<li><a class="disabled">|</a></li>
+				<li><a href="http://localhost:8080/usuario/form">INICIE SESIÓN</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main">
+		<section>
+			<p>Starbucks Corporation es una cadena internacional de cafeterías que cotiza en la bolsa NASDAQ. 
+			Fue fundada en 1971 (Hace 50 años), en Seattle, estado de Washington, Estados Unidos. 
+			Es considerada la compañía de comercialización de café más grande del mundo, con más de 24,000 
+			locales en 70 países. Starbucks ofrece café elaborado, bebidas y una variedad de bocadillos. 
+			También tiene a la venta productos relativos al rubro, como tazas, termos y café en grano, pero 
+			también otros productos, como libros, CD de música y películas. Sus cafeterías suelen 
+			encontrarse en lugares con mucha influencia, como aeropuertos, centros comerciales, 
+			centros históricos, museos, universidades, entre otros.</p>
+		</section>
+		<i><img class="cafe" src="images/coffe.png" alt="coffe"></i>
+	</main>
+	<br>
+	<footer id="pie"> 
+		Derechos Reservados &copy; 2020-2021 
+	</footer>
+</body>
+
+</html>
