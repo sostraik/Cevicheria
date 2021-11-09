@@ -50,12 +50,12 @@ public class ProductosController {
 	@ModelAttribute("alimentos")
 	public List<Productos> listarAlimentos(){
 		List<Productos> alimentos = new ArrayList<>();
-		alimentos.add(new Productos("Pumpkin Spice Frapuccino", "S/ 14.00", "1250"));
-		alimentos.add(new Productos("Frozen Maracuya Frapuccino", "S/ 15.00", "1350"));
-		alimentos.add(new Productos("Choco Maacuyár Frapuccino", "S/ 16.00", "1050"));
-		alimentos.add(new Productos("Popipó Frapuccino", "S/ 17.00", "1250"));
-		alimentos.add(new Productos("Rial lemon Frapuccino", "S/ 18.00", "1350"));
-		alimentos.add(new Productos("Chick chok Frapuccino", "S/ 19.00", "1050"));
+		alimentos.add(new Productos("Sandwich de pavo", "S/ 13.00", "1321"));
+		alimentos.add(new Productos("Sandwich Pastrani", "S/ 14.00", "1321"));
+		alimentos.add(new Productos("Sandwich Chicken Pesto Parmesano", "S/ 14.00", "1321"));
+		alimentos.add(new Productos("Sandwich Pavita & Queso", "S/ 10.00", "1321"));
+		alimentos.add(new Productos("Sandwich Eggmont", "S/ 9.50", "1321"));
+		alimentos.add(new Productos("Sandwich Pavita, queso & espinaca", "S/ 12.00", "1321"));
 		return alimentos;
 	}
 

@@ -4,12 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	<style type="text/css">
-		#T1 {
-			text-align: center;
-			font-size: 40px;
-		}
-	</style>
 	<link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
 </head>
 
@@ -28,10 +22,7 @@
 		</nav>
 	</header>
 	
-	<hr border="3px">
 	<h1 id="T1">LISTADO DE BEBIDAS</h1>
-	<hr border="3px">
-	<br>
 
 	<span th:if="${bebidas.isEmpty()}">No existen bebidas</span>
 	
@@ -51,10 +42,6 @@
 			</tr>
 		</tbody>
 	</table>
-	<br>
-	<footer id="pie">
-		Derechos Reservados &copy; 2020-2021
-	</footer>
 </body>
 
 </html>

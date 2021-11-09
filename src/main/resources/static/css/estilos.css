@@ -65,7 +65,7 @@ section{
 .cafe{
     width: 24%;
     position: absolute;
-    right: 15%;
+    right: 10%;
     top: 28%;
 }
 
@@ -122,6 +122,8 @@ section{
  	}
 
 table {
+    position: relative;
+    top: 100px;
 		/* Para centrar usamos "auto" en la alineación horizontal */
     margin: 0 auto;
 		/*Lo siguiente es para los bordes*/
