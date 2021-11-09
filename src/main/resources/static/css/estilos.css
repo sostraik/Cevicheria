@@ -4,11 +4,12 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Secular One', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
+
 body{
-    background: linear-gradient(to right, white 0%, white 70%,#00704a 70%, #00704a 100%);
+    background: linear-gradient(to right, white 0%, white 80%,#00704a 80%, #00704a 100%);
 }
 
 .container{display: flex;}
@@ -16,7 +17,7 @@ body{
 nav{
     justify-content: space-around;
     padding-top: 1%;
-    width: 70%;
+    width: 80%;
 }
 
 
@@ -25,7 +26,7 @@ nav{
 }
 
 ul{
-    width: 55%;
+    width: 70%;
     list-style: none;
     justify-content: space-around;
 }
@@ -35,12 +36,24 @@ a{
     position: relative;
     top: calc(50% - .6em);
     text-align: justify;
-    color: #000;
+    color: #3a2618;
 }
 
 a:hover{
     color:#00704a;
     transition: 1s;
+}
+
+h1{
+    width:auto;
+    font-size:35px;
+    position: absolute;
+    top: 15%;
+    left: calc(40% - 130px);
+}
+h2{
+    text-align: center;
+    color:#3a2618;
 }
 
 section{
@@ -117,25 +130,43 @@ table {
 
 
 .form{
-    margin: auto;
-    width: 80%;
-    max-width: 300px;
-    padding: 3em 1em;
+    background:#00704a;
     border-radius: 10px;
-    box-shadow: 0 5px 10px -5px rgb(0, 0, 0 /30%);
-    text-align: center;
-    background-color: rgba(0, 112, 74, 0.8)!important;
+    color:#fff;
+    width: 400px;
+    padding: 1em 0;
+    height: 330px;
+    position: absolute;
+    left: calc(40% - 200px);
+    top: calc(60% - 200px);
 }
 
-.form__container{
-    margin-top: 3em;
-    display: grid;
-    gap: 2.5em;
+.form__label{
+    position: relative;
+    left: 20px;
+    
+    
 }
 
-.disabled {
-    cursor: not-allowed;
-    pointer-events: none;
+.form__input{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    margin: .5em 0;
 }
+
+.btn{
+    color: #fff;
+    background:#3a2618;
+    width: 80px;
+    padding: .3em;
+    border: none;
+    border-radius:5px;
+    position:absolute;
+    left:calc(50% - 40px);
+    bottom: 15px;
+}
+
+
 
 

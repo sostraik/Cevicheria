@@ -33,9 +33,9 @@
 	<hr border="3px">
 	<br>
 
-	<span th:if="${bebidas.isEmpty()}">No existen bebidas</span>
+	<span th:if="${alimentos.isEmpty()}">No existen bebidas</span>
 	
-	<table th:if="${!bebidas.isEmpty()}" border="4px">
+	<table th:if="${!alimentos.isEmpty()}" border="4px">
 		<thead>
 			<tr>
 				<th>Bebida</th>
@@ -44,10 +44,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="bebidas: ${bebidas}">
-				<td th:text="${bebidas.nombrep}"></td>
-				<td th:text="${bebidas.preciop}"></td>
-				<td th:text="${bebidas.cantidadp} ?: 'Cantidad indefinida'"></td>
+			<tr th:each="alimentos: ${alimentos}">
+				<td th:text="${alimentos.nombrep}"></td>
+				<td th:text="${alimentos.preciop}"></td>
+				<td th:text="${alimentos.cantidadp} ?: 'Cantidad indefinida'"></td>
 			</tr>
 		</tbody>
 	</table>

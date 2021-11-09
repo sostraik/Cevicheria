@@ -25,13 +25,18 @@ public class ProductosController {
 		return "product";
 	}
 
-	@GetMapping("/listado")
-	public String listado(Model model) {
+	@GetMapping("/bebidas")
+	public String bebidas(Model model) {
 		return "listado";
 	}
 	
-	@ModelAttribute("productos")
-	public List<Productos> listarProductos(){
+	@GetMapping("/alimentos")
+	public String alimentos(Model model) {
+		return "alimentos";
+	}
+	
+	@ModelAttribute("bebidas")
+	public List<Productos> listarBebidas(){
 		List<Productos> productos = new ArrayList<>();
 		productos.add(new Productos("Pumpkin Spice Frapuccino", "S/ 14.00", "1250"));
 		productos.add(new Productos("Frozen Maracuya Frapuccino", "S/ 15.00", "1350"));
@@ -40,6 +45,18 @@ public class ProductosController {
 		productos.add(new Productos("Rial lemon Frapuccino", "S/ 18.00", "1350"));
 		productos.add(new Productos("Chick chok Frapuccino", "S/ 19.00", "1050"));
 		return productos;
+	}
+	
+	@ModelAttribute("alimentos")
+	public List<Productos> listarAlimentos(){
+		List<Productos> alimentos = new ArrayList<>();
+		alimentos.add(new Productos("Pumpkin Spice Frapuccino", "S/ 14.00", "1250"));
+		alimentos.add(new Productos("Frozen Maracuya Frapuccino", "S/ 15.00", "1350"));
+		alimentos.add(new Productos("Choco Maacuyár Frapuccino", "S/ 16.00", "1050"));
+		alimentos.add(new Productos("Popipó Frapuccino", "S/ 17.00", "1250"));
+		alimentos.add(new Productos("Rial lemon Frapuccino", "S/ 18.00", "1350"));
+		alimentos.add(new Productos("Chick chok Frapuccino", "S/ 19.00", "1050"));
+		return alimentos;
 	}
 
 }
