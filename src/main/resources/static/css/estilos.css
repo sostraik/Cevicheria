@@ -1,47 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
-*{
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Secular One', sans-serif;
-    font-size: 16px;
-}
-
-
-body{
-    background: linear-gradient(to right, white 0%, white 80%,#00704a 80%, #00704a 100%);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container{display: flex;}
 
 nav{
-    justify-content: space-around;
-    padding-top: 1%;
-    width: 80%;
+    text-align: left;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
 }
 
 
 .logos{
-    width: 9%;
+    width: 16%;
 }
 
-ul{
-    width: 70%;
-    list-style: none;
-    justify-content: space-around;
-}
-
-a{
-    text-decoration: none;
+header {
+    width: 100%;
+    height: 600px;
+    background: #00bf8f;  
+    /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, hsla(168, 100%, 4%, 0.603), hsla(165, 100%, 37%, 0.603)), url(../images/fondo.png);  
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, hsla(168, 100%, 4%, 0.603), hsla(165, 100%, 37%, 0.603)), url(../images/fondo.png); 
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
-    top: calc(50% - .6em);
-    text-align: justify;
-    color: #3a2618;
 }
 
-a:hover{
-    color:#00704a;
-    transition: 1s;
+header .textos-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1 {
+    font-size: 150px;
+    color: #fff;
+}
+
+.textos-header h2 {
+    font-size: 25px;
+    color: #fff;
 }
 
 h1{
@@ -51,9 +69,14 @@ h1{
     top: 15%;
     left: calc(40% - 130px);
 }
+
 h2{
     text-align: center;
     color:#3a2618;
+}
+
+#T1{
+	color:#fff;
 }
 
 section{
@@ -62,11 +85,58 @@ section{
     width: 50%;
 }
 
-.cafe{
-    width: 24%;
-    position: absolute;
-    right: 10%;
-    top: 28%;
+
+/*tabla CSS*/
+table {
+    background-color: white;
+    text-align: left;
+    border: 40px;
+    width: 50%;
+	height: 300px;
+}
+
+th,
+td {
+    padding: 20px;
+}
+
+thead {
+    background-color: #246355;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+tr:hover td {
+    background-color: #369681;
+    color: white;
+}
+
+/*Sobre nosotros*/
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
 }
 
 /*=================== MEDIA QUERY =====================*/
@@ -168,7 +238,3 @@ table {
     left:calc(50% - 40px);
     bottom: 15px;
 }
-
-
-
-

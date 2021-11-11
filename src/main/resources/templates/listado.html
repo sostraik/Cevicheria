@@ -11,22 +11,22 @@
 	<header>
 		<nav class="container">
 			<img class="logos" th:src="@{/images/logo.png}" alt="logo">
-			<ul class="container">
-				<li><a th:href="@{/index}">INICIO</a></li>
-				<li><a th:href="@{/producto/bebidas}">BEBIDAS</a></li>
-				<li><a th:href="@{/producto/alimentos}">ALIMENTOS</a></li>
-				<li><a href="#">PACKS Y BOXES</a></li>
-				<li><a href="#">MERCH Y CAFÉ EN GRANO</a></li>
-				<li><a th:href="@{/usuario/form}">INICIAR SESIÓN</a></li>
-			</ul>
+				<a th:href="@{/index}">INICIO</a>
+				<a th:href="@{/producto/bebidas}">BEBIDAS</a>
+				<a th:href="@{/producto/alimentos}">ALIMENTOS</a>
+				<a href="#">PACKS Y BOXES</a>
+				<a href="#">MERCH Y CAFÉ EN GRANO</a>
+				<a th:href="@{/usuario/form}">INICIAR SESIÓN</a>
 		</nav>
 	</header>
 	
-	<h1 id="T1">LISTADO DE BEBIDAS</h1>
+	<section class="textos-header">
+			<h1>Listados de Bebidas</h1>
+		</section>
 
 	<span th:if="${bebidas.isEmpty()}">No existen bebidas</span>
 	
-	<table th:if="${!bebidas.isEmpty()}" border="4px">
+	<table th:if="${!bebidas.isEmpty()}" >
 		<thead>
 			<tr>
 				<th>Bebida</th>
