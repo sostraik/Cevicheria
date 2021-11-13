@@ -6,7 +6,121 @@
     box-sizing: border-box;
 }
 
-.container{display: flex;}
+/* =================================== */
+
+:root {
+  --clr-primary: rgb(64, 128, 128);
+  --clr-gray: #37474f;
+  /* cambiar colorcito */
+  --clr-gray-light: rgb(0, 0, 0);
+}
+
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  justify-content: center;
+}
+
+.container {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 0.5rem;
+  position: relative;
+  margin: 0.5rem;
+}
+
+.banner-img {
+  position: absolute;
+  background-image: url(https://fondosmil.com/fondo/17538.jpg);
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-img {
+  width: 8rem;
+  clip-path: circle(100px at center);
+  margin-top: 4.5rem;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.description {
+  margin: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+  background-color: var(--clr-primary);
+  cursor: pointer;
+}
+
+/* ======================================= */
+
+body, input{
+    font-family: 'Popins', sans-serif;
+}
+
+.titulo{
+	width: 120px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.navbar{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: bold;
+}
+
+.navbar ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+
+
+.navbar ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: black;
+	position:absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+	width: 100%;
+}
+
+/* ================================ */
 
 nav{
     text-align: left;
@@ -31,15 +145,10 @@ nav > a:hover{
 
 header {
     width: 100%;
-    height: 600px;
-    background: #00bf8f;  
-    /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, hsla(168, 100%, 4%, 0.603), hsla(165, 100%, 37%, 0.603)), url(../images/fondo.png);  
-	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, hsla(168, 100%, 4%, 0.603), hsla(165, 100%, 37%, 0.603)), url(../images/fondo.png); 
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../images/fondo.png);
     background-size: cover;
-    background-attachment: fixed;
-    position: relative;
+    background-position: center;
 }
 
 header .textos-header {
@@ -64,10 +173,20 @@ header .textos-header {
 
 h1{
     width:auto;
-    font-size:35px;
+    font-size:4rem;
     position: absolute;
     top: 15%;
     left: calc(40% - 130px);
+    color: cadetblue;
+}
+
+h1 p{
+    width:auto;
+    font-size:1rem;
+    position: absolute;
+    top: 15%;
+    left: calc(40% - 130px);
+    color: rgb(255, 255, 255);
 }
 
 h2{
@@ -81,30 +200,37 @@ h2{
 
 section{
     display: inline-block;
-    padding: 5em;
+    padding: 3rem 9%;
     width: 50%;
 }
 
 
+
 /*tabla CSS*/
+
+/*
 table {
     background-color: white;
     text-align: left;
     border: 40px;
     width: 50%;
-	height: 300px;
+	height: 100px;
 }
+
+*/
 
 th,
 td {
-    padding: 20px;
+    padding: 10px;
 }
 
+/*
 thead {
     background-color: #246355;
     border-bottom: solid 5px #0F362D;
     color: white;
 }
+*/
 
 tr:nth-child(even) {
     background-color: #ddd;
@@ -191,14 +317,16 @@ main .sobre-nosotros{
  		border-top: 6px solid rgb(0, 0, 0);
  	}
 
+/*
 table {
     position: relative;
     top: 100px;
 		/* Para centrar usamos "auto" en la alineación horizontal */
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 		/*Lo siguiente es para los bordes*/
-    border-collapse: collapse;
+    /*border-collapse: collapse;
 }
+*/
 
 
 .form{
@@ -227,6 +355,7 @@ table {
     margin: .5em 0;
 }
 
+/*
 .btn{
     color: #fff;
     background:#3a2618;
@@ -237,4 +366,29 @@ table {
     position:absolute;
     left:calc(50% - 40px);
     bottom: 15px;
+}
+*/
+
+
+/* ================================= */
+
+
+.social-media{
+    display: flex;
+    justify-content: center;
+}
+
+
+.social-icon{
+    height: 46px;
+    width: 46px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 0 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    border-radius: 50%;
 }

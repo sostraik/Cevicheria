@@ -3,52 +3,42 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title th:text="${titulo}"></title>
+	<title></title>
 	<link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-
 	<header>
-		<nav class="container">
-			<img class="logos" th:src="@{/images/logo.png}" alt="logo">
-				<a th:href="@{/index}">INICIO</a>
-				<a th:href="@{/producto/bebidas}">BEBIDAS</a>
-				<a th:href="@{/producto/alimentos}">ALIMENTOS</a>
-				<a href="#">PACKS Y BOXES</a></li>
-				<a href="#">MERCH Y CAFÉ EN GRANO</a></li>
-				<a th:href="@{/usuario/form}">INICIAR SESIÓN</a>		
+		<nav class="navbar">
+			<a href="home.html" class="titulo" style="text-decoration:none"> <i class="fas fa-mug-hot"></i> STARBUCKS </a>
+			<!-- 	<img class="logos" th:src="@{/images/logo.png}" alt="logo"> -->
+				<ul>
+					<li><a th:href="@{/index}">INICIO</a></li>
+					<li><a th:href="@{/producto/bebidas}">BEBIDAS</a></li>
+					<li><a th:href="@{/producto/alimentos}">ALIMENTOS</a></li>
+					<li><a href="#">PACKS Y BOXES</a></li>
+					<li><a href="#">MERCH Y CAFÉ EN GRANO</a></li>
+					<li><a th:href="@{/usuario/form}">INICIAR SESIÓN</a></li>
+				</ul>	
 		</nav>
-		<section class="textos-header">
-			<h1>STARBUCKS</h1>
-			<h2>El mejor cafe del Peru</h2>
-		</section>
-	</header>
-
-	<main id="main">
-		<section class="contenedor sobre-nosotros">
-            <h2 class="titulo">Nuestro producto</h2>
-            <div class="contenedor-sobre-nosotros">
-                <img class="imagen-about-us" th:src="@{/images/coffe.svg}" alt="cafe">
-                <div class="contenido-textos">
-                    <p>Starbucks Corporation es una cadena internacional de cafeterías que cotiza en la bolsa NASDAQ. 
-						Fue fundada en 1971 (Hace 50 años), en Seattle, estado de Washington, Estados Unidos. 
-						Es considerada la compañía de comercialización de café más grande del mundo, con más de 24,000 
-						locales en 70 países. Starbucks ofrece café elaborado, bebidas y una variedad de bocadillos. 
-						También tiene a la venta productos relativos al rubro, como tazas, termos y café en grano, pero 
-						también otros productos, como libros, CD de música y películas. Sus cafeterías suelen 
-						encontrarse en lugares con mucha influencia, como aeropuertos, centros comerciales, 
-						centros históricos, museos, universidades, entre otros.</p>
-                </div>
-            </div>
-        </section>
-	</main>
-	<br>
-	<footer id="pie"> 
-		Derechos Reservados &copy; 2020-2021 
-	</footer>
+		<br><br><br><br><br>
+		<h1>BE GREEN FRIENDLY</h1>
+		<br/>
+		<h1><br/><p>En Starbucks trabajamos continuamente para reforzar <br/>
+		nuestro compromiso con el Medio Ambiente.<br/>
+		#StarbucksIsGreen</p></h1>
+		<br><br>
+		<div class="social-media">
+			<a href="#" class="social-icon">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+		<div>
+		<div class="social-media">
+			<a href="#" class="social-icon">
+				<i class="fab fa-instagram"></i>
+			</a>
+		<div>
 </body>
 
 </html>

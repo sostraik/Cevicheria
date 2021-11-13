@@ -39,11 +39,13 @@ public class ProductosController {
 	public List<Productos> listarBebidas(){
 		List<Productos> productos = new ArrayList<>();
 		productos.add(new Productos("Pumpkin Spice Frapuccino", "S/ 14.00", "1250"));
-		productos.add(new Productos("Frozen Maracuya Frapuccino", "S/ 15.00", "1350"));
-		productos.add(new Productos("Choco Maacuyár Frapuccino", "S/ 16.00", "1050"));
-		productos.add(new Productos("Popipó Frapuccino", "S/ 17.00", "1250"));
-		productos.add(new Productos("Rial lemon Frapuccino", "S/ 18.00", "1350"));
-		productos.add(new Productos("Chick chok Frapuccino", "S/ 19.00", "1050"));
+		return productos;
+	}
+	
+	@ModelAttribute("bebidas2")
+	public List<Productos> listarBebidas2(){
+		List<Productos> productos = new ArrayList<>();
+		productos.add(new Productos("Pumpkin  Frapuccino", "S/ 15.00", "1250"));
 		return productos;
 	}
 	
