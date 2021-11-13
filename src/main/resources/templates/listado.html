@@ -6,135 +6,57 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<script th:src="@{/js/listado.js}" type="module"></script>
 </head>
 
 <body>
 	<header>
 		<nav class="navbar">
-			<a href="home.html" class="titulo" style="text-decoration:none"> <i class="fas fa-mug-hot"></i> STARBUCKS </a>
+			<a href="home.html" class="titulo" style="text-decoration:none"> <i class="fas fa-mug-hot"></i> STARBUCKS
+			</a>
 			<!-- 	<img class="logos" th:src="@{/images/logo.png}" alt="logo"> -->
-				<ul>
-					<li><a th:href="@{/index}">INICIO</a></li>
-					<li><a th:href="@{/producto/bebidas}">BEBIDAS</a></li>
-					<li><a th:href="@{/producto/alimentos}">ALIMENTOS</a></li>
-					<li><a href="#">PACKS Y BOXES</a></li>
-					<li><a href="#">MERCH Y CAFÉ EN GRANO</a></li>
-					<li><a th:href="@{/usuario/form}">INICIAR SESIÓN</a></li>
-				</ul>	
+			<ul>
+				<li><a th:href="@{/index}">INICIO</a></li>
+				<li><a th:href="@{/producto/bebidas}">BEBIDAS</a></li>
+				<li><a th:href="@{/producto/alimentos}">ALIMENTOS</a></li>
+				<li><a href="#">PACKS Y BOXES</a></li>
+				<li><a href="#">MERCH Y CAFÉ EN GRANO</a></li>
+				<li><a th:href="@{/usuario/form}">INICIAR SESIÓN</a></li>
+			</ul>
 		</nav>
 		<br><br><br><br><br>
 		<h1>Nuestras bebidas</h1>
 		<br>
-		<div class="wrapper-grid">
+		<div class="wrapper-grid"></div>
 
-    <div class="container">
-      <div class='banner-img'></div>
-      <img src='https://i.pinimg.com/564x/1d/0d/98/1d0d9860c18e82db96a62ab355243077.jpg' alt='profile image' class="profile-img">
-      <table>
-      <tbody>
-      <tr th:each="bebidas: ${bebidas}">
-      <br><br>
-			<td>Nombre: </td>
-			<td th:text="${bebidas.nombrep}"></td>
-	  </tr>
-	  <br/>
-	  <tr th:each="bebidas: ${bebidas}">
-	  		<td>Precio: </td>
-			 <td th:text="${bebidas.preciop}"></td>
-	  </tr>
-	  <br/>
-	  <tr th:each="bebidas: ${bebidas}">
-	  		<td>Cantidad: </td>
-			 <td th:text="${bebidas.cantidadp} ?: 'Cantidad indefinida'"></td>
-	  </tr>
-      </tbody>
-      </table>
-      <br>
-      <button class='btn'>Comprar</button>
-      <br>
-    </div>
-    
-
-    <div class="container">
-      <div class='banner-img'></div>
-      <img src='https://i.pinimg.com/564x/a3/ef/1a/a3ef1ae0b6fe7e38b6e819f1e5a3013a.jpg' alt='profile image' class="profile-img">
-      <table>
-      <tbody>
-      <tr th:each="bebidas: ${bebidas}">
-      <br><br>
-			<td>Nombre: </td>
-			<td th:text="${bebidas.nombrep}"></td>
-	  </tr>
-	  <br/>
-	  <tr th:each="bebidas: ${bebidas}">
-	  		<td>Precio: </td>
-			 <td th:text="${bebidas.preciop}"></td>
-	  </tr>
-	  <br/>
-	  <tr th:each="bebidas: ${bebidas}">
-	  		<td>Cantidad: </td>
-			 <td th:text="${bebidas.cantidadp} ?: 'Cantidad indefinida'"></td>
-	  </tr>
-      </tbody>
-      </table>
-      <br>
-      <button class='btn'>Comprar</button>
-      <br>
-    </div>
-
-    <div class="container">
-      <div class='banner-img'></div>
-      <img src='https://i.pinimg.com/564x/25/67/29/256729d3fa50293983beb71cf8e2ca1e.jpg' alt='profile image' class="profile-img">
-      <table>
-      <tbody>
-      <tr th:each="bebidas: ${bebidas}">
-      <br><br>
-			<td>Nombre: </td>
-			<td th:text="${bebidas.nombrep}"></td>
-	  </tr>
-	  <br/>
-	  <tr th:each="bebidas: ${bebidas}">
-	  		<td>Precio: </td>
-			 <td th:text="${bebidas.preciop}"></td>
-	  </tr>
-	  <br/>
-	  <tr th:each="bebidas: ${bebidas}">
-	  		<td>Cantidad: </td>
-			 <td th:text="${bebidas.cantidadp} ?: 'Cantidad indefinida'"></td>
-	  </tr>
-      </tbody>
-      </table>
-      <br>
-      <button class='btn'>Comprar</button>
-      <br>
-    </div>
-
-    <div class="container">
-      <div class='banner-img'></div>
-      <img src='https://i.pinimg.com/236x/a9/94/0b/a9940b3ca181abf8ca519e16c7619cc6.jpg' class="profile-img">
-      <table>
-      <tbody>
-      <tr th:each="bebidas: ${bebidas}">
-      <br><br>
-			<td>Nombre: </td>
-			<td th:text="${bebidas.nombrep}"></td>
-	  </tr>
-	  <br/>
-	  <tr th:each="bebidas: ${bebidas}">
-	  		<td>Precio: </td>
-			 <td th:text="${bebidas.preciop}"></td>
-	  </tr>
-	  <br/>
-	  <tr th:each="bebidas: ${bebidas}">
-	  		<td>Cantidad: </td>
-			 <td th:text="${bebidas.cantidadp} ?: 'Cantidad indefinida'"></td>
-	  </tr>
-      </tbody>
-      </table>
-      <br>
-      <button class='btn'>Comprar</button>
-      <br>
-    </div>
+		<template id="template">
+			<div class="container">
+				<div class='banner-img'></div>
+				<img>
+				<table>
+					<tbody>
+						<tr>
+							<br><br>
+							<td>Nombre: </td>
+							<td class="nombreBe"></td>
+						</tr>
+						<br />
+						<tr>
+							<td>Precio:</td>
+							<td class="precioBe"></td>
+						</tr>
+						<br />
+						<tr>
+							<td>Estado: </td>
+							<td class="estadoBe"></td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<button class='btn'>Comprar</button>
+				<br>
+			</div>
+		</template>
 </body>
 
 </html>
