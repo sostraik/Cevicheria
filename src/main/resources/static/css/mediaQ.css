@@ -1,0 +1,44 @@
+/*=================== MEDIA QUERY =====================*/
+@media screen and (max-width:1366px){
+    *{
+        font-size: 16px;
+    }
+    a{
+        font-size: .9em;
+        margin: .5em;
+    }
+}
+
+@media screen and (max-width: 425px), screen and (max-width: 768px){
+    body{
+        background: #fff;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5%;
+        width: auto;
+    }
+
+    .logos{
+        width: 50%;
+        position: relative;
+        left: 25%;
+    }
+
+    ul{
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        margin: 8%;
+    }
+    li{
+        margin: 5%;
+    }
+
+    main{
+        position: fixed;
+        visibility: hidden;
+    }
+
+}

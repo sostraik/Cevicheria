@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import 'generals.css';
+@import 'navbar.css';
+@import 'indexmain.css';
+@import 'mediaQ.css';
 
 /* =================================== */
 
@@ -71,123 +68,12 @@
 
 /* ======================================= */
 
-body, input{
-    font-family: 'Popins', sans-serif;
-}
-
-.titulo{
-	width: 120px;
-	cursor: pointer;
-	text-decoration: none;
-}
-
-.navbar{
-	width: 85%;
-	margin: auto;
-	padding: 35px 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	font-weight: bold;
-}
-
-.navbar ul li{
-	list-style: none;
-	display: inline-block;
-	margin: 0 20px;
-	position: relative;
-}
 
 
-.navbar ul li a{
-	text-decoration: none;
-	color: #fff;
-	text-transform: uppercase;
-}
-
-.navbar ul li::after{
-	content: '';
-	height: 3px;
-	width: 0;
-	background: black;
-	position:absolute;
-	left: 0;
-	bottom: -10px;
-	transition: 0.5s;
-}
-
-.navbar ul li:hover::after{
-	width: 100%;
-}
 
 /* ================================ */
 
-nav{
-    text-align: left;
-    padding: 30px 50px 0 0;
-}
 
-nav > a{
-    color:#fff;
-    font-weight: 300;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-nav > a:hover{
-    text-decoration: underline;
-}
-
-
-.logos{
-    width: 16%;
-}
-
-header {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../images/fondo.png);
-    background-size: cover;
-    background-position: center;
-}
-
-header .textos-header {
-    display: flex;
-    height: 430px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.textos-header h1 {
-    font-size: 150px;
-    color: #fff;
-}
-
-.textos-header h2 {
-    font-size: 25px;
-    color: #fff;
-}
-
-h1{
-    width:auto;
-    font-size:4rem;
-    position: absolute;
-    top: 15%;
-    left: calc(40% - 130px);
-    color: cadetblue;
-}
-
-h1 p{
-    width:auto;
-    font-size:1rem;
-    position: absolute;
-    top: 15%;
-    left: calc(40% - 130px);
-    color: rgb(255, 255, 255);
-}
 
 h2{
     text-align: center;
@@ -265,50 +151,7 @@ main .sobre-nosotros{
     text-align: justify;
 }
 
-/*=================== MEDIA QUERY =====================*/
-@media screen and (max-width:1366px){
-    *{
-        font-size: 16px;
-    }
-    a{
-        font-size: .9em;
-        margin: .5em;
-    }
-}
 
-@media screen and (max-width: 425px), screen and (max-width: 768px){
-    body{
-        background: #fff;
-    }
-    nav{
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 5%;
-        width: auto;
-    }
-
-    .logos{
-        width: 50%;
-        position: relative;
-        left: 25%;
-    }
-
-    ul{
-        width: auto;
-        flex-direction: column;
-        align-items: center;
-        margin: 8%;
-    }
-    li{
-        margin: 5%;
-    }
-
-    main{
-        position: fixed;
-        visibility: hidden;
-    }
-
-}
 
 #pie { 
  		clear: both;
@@ -355,40 +198,5 @@ table {
     margin: .5em 0;
 }
 
-/*
-.btn{
-    color: #fff;
-    background:#3a2618;
-    width: 80px;
-    padding: .3em;
-    border: none;
-    border-radius:5px;
-    position:absolute;
-    left:calc(50% - 40px);
-    bottom: 15px;
-}
-*/
 
 
-/* ================================= */
-
-
-.social-media{
-    display: flex;
-    justify-content: center;
-}
-
-
-.social-icon{
-    height: 46px;
-    width: 46px;
-    border: 1px solid rgb(255, 255, 255);
-    margin: 0 0.45rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1.1rem;
-    border-radius: 50%;
-}

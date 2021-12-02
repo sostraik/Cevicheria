@@ -10,12 +10,14 @@
 </head>
 
 <body>
+
 	<header>
 		<nav class="navbar">
-			<a href="home.html" class="titulo" style="text-decoration:none"> <i class="fas fa-mug-hot"></i> STARBUCKS
-			</a>
-			<!-- 	<img class="logos" th:src="@{/images/logo.png}" alt="logo"> -->
-			<ul>
+			<p>
+				<i class="fas fa-mug-hot"></i>
+				STARBUCKS
+			</p>
+			<ul class="nav__list">
 				<li><a th:href="@{/index}">INICIO</a></li>
 				<li><a th:href="@{/producto/bebidas}">BEBIDAS</a></li>
 				<li><a th:href="@{/producto/alimentos}">ALIMENTOS</a></li>
@@ -24,39 +26,41 @@
 				<li><a th:href="@{/usuario/form}">INICIAR SESIÓN</a></li>
 			</ul>
 		</nav>
-		<br><br><br><br><br>
-		<h1>Nuestras bebidas</h1>
-		<br>
-		<div class="wrapper-grid"></div>
+	</header>
+	
+	<h1>Nuestras bebidas</h1>
+	<div class="wrapper-grid"></div>
 
-		<template id="template">
-			<div class="container">
-				<div class='banner-img'></div>
-				<img>
-				<table>
-					<tbody>
-						<tr>
-							<br><br>
-							<td>Nombre: </td>
-							<td class="nombreBe"></td>
-						</tr>
-						<br />
-						<tr>
-							<td>Precio:</td>
-							<td class="precioBe"></td>
-						</tr>
-						<br />
-						<tr>
-							<td>Estado: </td>
-							<td class="estadoBe"></td>
-						</tr>
-					</tbody>
-				</table>
-				<br>
-				<button class='btn'>Comprar</button>
-				<br>
-			</div>
-		</template>
+	<template id="template">
+		<div class="container">
+			<div class='banner-img'></div>
+			<img>
+			<table>
+				<tbody>
+					<tr>
+						<br><br>
+						<td>Nombre: </td>
+						<td class="nombreBe"></td>
+					</tr>
+					<br />
+					<tr>
+						<td>Precio:</td>
+						<td class="precioBe"></td>
+					</tr>
+					<br />
+					<tr>
+						<td>Estado: </td>
+						<td class="estadoBe"></td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<button class='btn'>Comprar</button>
+			<br>
+		</div>
+	</template>	
+		
+		
 </body>
 
 </html>

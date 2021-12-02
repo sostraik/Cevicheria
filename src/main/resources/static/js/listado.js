@@ -43,7 +43,7 @@ productos.forEach( e => {
     $template.querySelector(".precioBe").textContent = e.precio;
     $template.querySelector(".estadoBe").textContent = e.estado;
 
-    if(e.estado === `Agotado`){
+    if(e.estado === `Agotado` ){
         $template.querySelector("button").setAttribute("style", "display: none;")
     }
     // Clonamos un nodo (referencia, copia estructura)

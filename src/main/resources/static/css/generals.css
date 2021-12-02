@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input{
+    font-family: 'Popins', sans-serif;
+}
+
+
+body{
+    background: linear-gradient(#000000bf, #000000bf), url('../images/fondo.png');
+    background-size: cover;
+}

@@ -1,0 +1,44 @@
+h1{
+    width:auto;
+    font-size:4rem;
+    display: inline-block;
+    position: relative;
+    left: 40%;
+    top: 15%;
+    color: #00704a;
+}
+
+h1 p{
+    width:auto;
+    font-size:1rem;
+    position: absolute;
+    top: 15%;
+    left: calc(40% - 130px);
+    color: rgb(255, 255, 255);
+}
+
+span{
+    font-family: 'Popins', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon{
+    height: 46px;
+    width: 46px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 0 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    border-radius: 50%;
+}

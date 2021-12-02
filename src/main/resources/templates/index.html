@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-
 <head>
-	<meta charset="UTF-8">
-	<title></title>
-	<link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}"></head>
 <body>
-	<header>
-		<nav class="navbar">
-			<a href="home.html" class="titulo" style="text-decoration:none"> <i class="fas fa-mug-hot"></i> STARBUCKS </a>
-			<!-- 	<img class="logos" th:src="@{/images/logo.png}" alt="logo"> -->
-				<ul>
-					<li><a th:href="@{/index}">INICIO</a></li>
-					<li><a th:href="@{/producto/bebidas}">BEBIDAS</a></li>
-					<li><a th:href="@{/producto/alimentos}">ALIMENTOS</a></li>
-					<li><a href="#">PACKS Y BOXES</a></li>
-					<li><a href="#">MERCH Y CAFÉ EN GRANO</a></li>
-					<li><a th:href="@{/usuario/form}">INICIAR SESIÓN</a></li>
-				</ul>	
-		</nav>
-		<br><br><br><br><br>
-		<h1>BE GREEN FRIENDLY</h1>
-		<br/>
-		<h1><br/><p>En Starbucks trabajamos continuamente para reforzar <br/>
-		nuestro compromiso con el Medio Ambiente.<br/>
-		#StarbucksIsGreen</p></h1>
-		<br><br>
-		<div class="social-media">
-			<a href="#" class="social-icon">
-				<i class="fab fa-facebook-f"></i>
-			</a>
-		<div>
-		<div class="social-media">
-			<a href="#" class="social-icon">
-				<i class="fab fa-instagram"></i>
-			</a>
-		<div>
+    <header>
+        <nav class="navbar">
+            <p>
+                <i class="fas fa-mug-hot"></i>
+                STARBUCKS
+            </p>
+            <ul class="nav__list">
+                <li><a th:href="@{/index}">INICIO</a></li>
+                <li><a th:href="@{/producto/bebidas}">BEBIDAS</a></li>
+                <li><a th:href="@{/producto/alimentos}">ALIMENTOS</a></li>
+                <li><a href="#">PACKS Y BOXES</a></li>
+                <li><a href="#">MERCH Y CAFÉ EN GRANO</a></li>
+                <li><a th:href="@{/usuario/form}">INICIAR SESIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>  
+        <h1>BE GREEN FRIENDLY</h1>
+        <span>En Starbucks<br> trabajamos continuamente para reforzar</span>
+        <span>nuestro compromiso con el Medio Ambiente.</span>
+        <span>#StarbucksIsGreen</span>
+        <div class="social-media">
+            <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        <div>
+        <div class="social-media">
+            <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        <div>
+    </main>
+    
 </body>
-
 </html>
